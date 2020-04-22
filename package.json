@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-eslint": "^10.0.1",
     "classnames": "^2.2.6",
+    "copy-text-to-clipboard": "^2.1.1",
     "gatsby": "^2.0.20",
     "gatsby-pagination": "^1.2.0",
     "gatsby-plugin-catch-links": "^2.0.4",
@@ -30,6 +31,7 @@
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
     "prismjs": "^1.15.0",
+    "prism-react-renderer": "^1.0.2",
     "react": "^16.5.2",
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.5.2",
