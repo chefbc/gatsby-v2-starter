@@ -19,6 +19,7 @@ const CodeBlock = ({ children, className }) => {
               ))}
             </div>
           ))}
+        Cool
         </pre>
       )}
     </Highlight>
