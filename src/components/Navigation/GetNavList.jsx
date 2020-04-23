@@ -1,11 +1,11 @@
-// import FontIcon from "react-md/lib/FontIcons";
+import FontIcon from "react-md/lib/FontIcons";
 import { Link } from "gatsby";
 
 function GetNavList(config) {
   const NavList = [
     {
       primaryText: "Home",
-      // LeftIcon: <p>home</p>,
+      LeftIcon: <p>home</p>,
       component: Link,
       to: "/"
     },
@@ -18,7 +18,7 @@ function GetNavList(config) {
     config.userLinks.forEach(link => {
       NavList.push({
         primaryText: link.label,
-        // LeftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
+        LeftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
         component: "a",
         href: link.url
       });
@@ -29,7 +29,7 @@ function GetNavList(config) {
 
   NavList.push({
     primaryText: "About",
-    // LeftIcon: <FontIcon>person</FontIcon>,
+    LeftIcon: <FontIcon>person</FontIcon>,
     component: Link,
     to: "/about/"
   });
