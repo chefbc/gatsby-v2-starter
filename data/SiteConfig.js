@@ -14,7 +14,7 @@ module.exports = {
     "/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssAuthor: "chefbc", // The author name used in the RSS file
+  siteRssAuthor: "Casper User", // The author name used in the RSS file
   // siteFBAppID: "1825356251115265", // optional, sets the FB Application ID for using app insights
   sitePaginationLimit: 10, // The max number of posts per page.
   googleAnalyticsID: "UA-30955144-5", // GA tracking ID.
@@ -31,17 +31,17 @@ module.exports = {
       label: "GitHub",
       url: "https://github.com/chefbc",
       iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
+    },
+    {
+      label: "Twitter",
+      url: "https://twitter.com/chefbc001",
+      iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
+    },
+    {
+      label: "Email",
+      url: "mailto:chefbc@example.com",
+      iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
     }
-    // {
-    //   label: "Twitter",
-    //   url: "https://twitter.com/chefbc001",
-    //   iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
-    // },
-    // {
-    //   label: "Email",
-    //   url: "mailto:chefbc@example.com",
-    //   iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
-    // }
   ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: {
