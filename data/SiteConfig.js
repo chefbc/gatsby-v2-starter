@@ -9,7 +9,7 @@ module.exports = {
   siteUrl: "https://chefbc.com", // Domain of your website without pathPrefix.
   pathPrefix: "/gatsby-starter-casper", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "A Casper themed GatsbyJS stater based on the Advanced Starter.", // Website description used for RSS feeds/meta description tag.
+    "My personal blog of random thoughts", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
@@ -27,11 +27,11 @@ module.exports = {
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
   userLinks: [
-    {
-      label: "GitHub",
-      url: "https://github.com/chefbc",
-      iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
-    },
+    // {
+    //   label: "GitHub",
+    //   url: "https://github.com/chefbc",
+    //   iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
+    // },
     // {
     //   label: "Twitter",
     //   url: "https://twitter.com/chefbc001",
