@@ -9,9 +9,9 @@ module.exports = {
   siteUrl: "https://chefbc.com", // Domain of your website without pathPrefix.
   pathPrefix: "/gatsby-starter-casper", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "My personal blog of random thoughts", // Website description used for RSS feeds/meta description tag.
+    "random thoughts and ideas", // Website description used for RSS feeds/meta description tag.
   siteCover:
-    "/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
+    "/images/blog-cover4.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "ChefBC", // The author name used in the RSS file
