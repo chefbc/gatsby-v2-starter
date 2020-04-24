@@ -1,0 +1,13 @@
+{
+  "uid": "chefbc",
+  "name": "Chef BC",
+  "image": "/logos/logo.png",
+  "url": "http://chefbc.com/",
+  "location": "Milwaukee, WI",
+  "bio": "It's me... It's me... It's me ChefBC!  This is my attempt to blog about interest things.",
+  "socialUrls": [
+    "https://github.com/chefbc",
+    "https://twitter.com/chefbc001",
+    "https://www.linkedin.com/in/caseycarlsen"
+  ]
+}
