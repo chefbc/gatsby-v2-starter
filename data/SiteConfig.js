@@ -22,7 +22,7 @@ module.exports = {
   siteSocialUrls: [
     "https://github.com/chefbc/",
     "https://twitter.com/chefbc001",
-    "mailto:chefbc@example.com"
+    "https://www.linkedin.com/in/caseycarlsen"
   ],
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
@@ -32,16 +32,16 @@ module.exports = {
       url: "https://github.com/chefbc",
       iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
     },
-    {
-      label: "Twitter",
-      url: "https://twitter.com/chefbc001",
-      iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
-    },
-    {
-      label: "Email",
-      url: "mailto:chefbc@example.com",
-      iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
-    }
+    // {
+    //   label: "Twitter",
+    //   url: "https://twitter.com/chefbc001",
+    //   iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
+    // },
+    // {
+    //   label: "Email",
+    //   url: "mailto:chefbc@example.com",
+    //   iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
+    // }
   ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: {

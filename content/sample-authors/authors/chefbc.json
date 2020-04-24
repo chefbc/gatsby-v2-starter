@@ -1,13 +1,13 @@
 {
   "uid": "chefbc",
-  "name": "Chef BC",
-  "image": "https://api.adorable.io/avatars/150/test.png",
+  "name": "ChefBC",
+  "image": "/logos/logo.png",
   "url": "http://chefbc.com/",
   "location": "North Pole, Earth",
-  "bio": "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.",
+  "bio": "It's me ChefBC!  This is my attempt to blog about things I have come across.",
   "socialUrls": [
     "https://github.com/chefbc",
     "https://twitter.com/chefbc001",
-    "mailto:chefbc@example.com"
+    "https://www.linkedin.com/in/caseycarlsen"
   ]
 }

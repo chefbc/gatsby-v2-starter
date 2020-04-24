@@ -1,7 +1,6 @@
 ---
 title: "Upgraded to Gatsby v2"
 cover: "https://unsplash.it/1280/900/?random?TheFallenTime"
-author: "casper"
 date: "2018-10-19"
 category: "Gatsby"
 tags:
