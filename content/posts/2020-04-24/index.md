@@ -1,6 +1,7 @@
 ---
 title: "Hello World"
 cover: "https://source.unsplash.com/iY6QMkP66mI/1280x500"
+author: "chefbc"
 date: "2020-04-24"
 category: "tech"
 tags:
