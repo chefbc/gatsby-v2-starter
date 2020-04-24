@@ -2,8 +2,8 @@ module.exports = {
   blogPostDir: "sample-posts", // The name of directory that contains your posts.
   blogAuthorDir: "sample-authors", // The name of directory that contains your 'authors' folder.
   blogAuthorId: "chefbc", // The default and fallback author ID used for blog posts without a defined author.
-  siteTitle: "ChefBC.com", // Site title.
-  siteTitleAlt: "ChefBC.com", // Alternative site title for SEO.
+  siteTitle: "chefbc.com", // Site title.
+  siteTitleAlt: "chefbc.com", // Alternative site title for SEO.
   siteLogo:
     "/logos/logo.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "https://chefbc.com", // Domain of your website without pathPrefix.
@@ -14,7 +14,7 @@ module.exports = {
     "/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssAuthor: "Casper User", // The author name used in the RSS file
+  siteRssAuthor: "ChefBC", // The author name used in the RSS file
   // siteFBAppID: "1825356251115265", // optional, sets the FB Application ID for using app insights
   sitePaginationLimit: 10, // The max number of posts per page.
   googleAnalyticsID: "UA-30955144-5", // GA tracking ID.
