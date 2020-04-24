@@ -9,7 +9,6 @@ tags:
     - hello
     - intro
 ---
-# Quanto et ius coniunctis urbes
 
 ## Oh Jello!
 
