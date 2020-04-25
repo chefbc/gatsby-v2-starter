@@ -15,5 +15,5 @@ A "Hello, World!" program generally is a computer program that outputs or displa
 This is my version of `Hello, World!`.  If you have ever personally talked with me I always use `jello` instead of `hello`.  With that being said...
 
 ```python
-    print("Jello, World! My First Blog Post!")
+print("Jello, World! My First Blog Post!")
 ```
