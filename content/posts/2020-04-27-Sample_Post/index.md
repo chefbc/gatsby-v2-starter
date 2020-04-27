@@ -1,7 +1,7 @@
 ---
-title: "Big Test"
+title: "Format Test"
 category: "moar"
-date: "2018-01-03"
+date: "2020-04-24"
 slug: "Big-Sample_Test"
 tags:
     - test
@@ -9,7 +9,7 @@ tags:
     - no-cover
 ---
 
-# NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
+#### This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
