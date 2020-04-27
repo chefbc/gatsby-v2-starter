@@ -28,12 +28,12 @@ brew install pyenv
 
 ##### List installed python versions
 ```bash
-pyenv install — list
+pyenv install --list
 ```
 
 ##### Install python versions
 ```bash
-pyenv install -v 3.8.0
+pyenv install -v 3.8.2
 ```
 
 ##### List your installed python versions
@@ -43,7 +43,7 @@ pyenv versions
 
 ##### Change your global python version
 ```bash
-pyenv global 3.8.0
+pyenv global 3.8.2
 ```
 
 ##### Set location specific python version
@@ -54,6 +54,15 @@ pyenv local 2.7.15
 ##### Uninstall any version
 ```bash
 pyenv uninstall 2.7.15
+```
+
+##### Add to ~/.bash_profile
+```bash
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 ```
 
 ##### Create a virtual environment for python2
@@ -67,12 +76,13 @@ source env/bin/activate
 
 ##### Create a virtual environment for python3 with [venv] (https://docs.python.org/3/library/venv.html)
 ```bash
+pyenv versions
+pyenv shell 3.8.2
+python -V
 python3 -m venv env
-```
-##### Activate your virtual env
-```bash
 source env/bin/activate
 ```
+
 ##### Leave virtual environment
 ```bash
 deactivate
