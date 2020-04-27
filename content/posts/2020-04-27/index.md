@@ -1,5 +1,5 @@
 ---
-title: "Python Dev Setup"
+title: "Setup a Python Development Environment"
 cover: "https://source.unsplash.com/cxMJYcuCLEA/1280x500"
 author: "chefbc"
 date: "2020-04-27"
@@ -12,7 +12,7 @@ tags:
 ---
 
 
-# Python Dev Environment Setup
+# Setup a Python Development Environment
 
 This is intended as a quick reference and explanation of how I setup an evironment to develop via Python.
 
