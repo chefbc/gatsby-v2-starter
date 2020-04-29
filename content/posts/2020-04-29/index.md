@@ -34,9 +34,7 @@ BKUP_SIZE_GB=15
 DISK_TYPE="pd-ssd"
 
 gcloud compute disks create "${NEW_DISK_NAME}" --size "${BKUP_SIZE_GB}" --zone "${ZONE_NAME}" --type "${DISK_TYPE}"
-
 gcloud compute instances attach-disk "${INSTANCE_NAME}" --disk="${NEW_DISK_NAME}" --mode=rw --zone="${ZONE_NAME}" --device-name="${DEVICE_NAME}"
-
 gcloud compute instances describe ${INSTANCE_NAME} --zone "${ZONE_NAME}" --format='yaml(name,disks)'
 ```
 
@@ -77,9 +75,7 @@ mount -a
 ### Resize GCP disk
 ```bash
 NEW_SIZE_GB=25
-
 gcloud compute disks resize "${NEW_DISK_NAME}" --size "${NEW_SIZE_GB}" --zone "${ZONE_NAME}" --quiet
-
 gcloud compute disks describe "${NEW_DISK_NAME}" --zone "${ZONE_NAME}"
 ```
 
@@ -94,3 +90,17 @@ resize2fs /dev/${DEVICE_ID}
 ```bash
 xfs_growfs ${MNT_DIR} -D size
 ```
+
+
+### Unmount and detach GCP disk
+```bash
+umount ${MNT_DIR}
+
+gcloud compute instances detach-disk "${INSTANCE_NAME}" --disk="${NEW_DISK_NAME}" --zone="${ZONE_NAME}"
+```
+
+### Destroy GCP disk
+```bash
+gcloud compute disks delete "${NEW_DISK_NAME}" --zone="${ZONE_NAME}"
+```
+
