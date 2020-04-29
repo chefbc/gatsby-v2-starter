@@ -95,8 +95,8 @@ xfs_growfs ${MNT_DIR} -D size
 ### Unmount and detach GCP disk
 ```bash
 umount ${MNT_DIR}
-
 gcloud compute instances detach-disk "${INSTANCE_NAME}" --disk="${NEW_DISK_NAME}" --zone="${ZONE_NAME}"
+gcloud compute instances describe ${INSTANCE_NAME} --zone "${ZONE_NAME}" --format='yaml(name,disks)'
 ```
 
 ### Destroy GCP disk
