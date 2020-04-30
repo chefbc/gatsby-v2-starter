@@ -47,7 +47,7 @@ class PostListing extends React.Component {
               <section className="post-excerpt">
                 {/* TODO limit excerpt to 26 words */}
                 <p>
-                  What {excerpt}{" "}
+                  {excerpt}{" "}
                   <Link className="read-more" to={path}>
                     &raquo;
                   </Link>
