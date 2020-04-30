@@ -74,8 +74,10 @@ class PostTemplate extends React.Component {
   render() {
     const { location, data } = this.props;
     const { slug, next, prev } = this.props.pageContext;
+
     const postNode = this.props.data.markdownRemark;
     const post = parsePost(postNode.frontmatter, slug);
+
     const { cover, title, date, author, tags } = post;
     const className = post.post_class ? post.post_class : "post";
     const authorData = AuthorModel.getAuthor(
@@ -121,6 +123,10 @@ class PostTemplate extends React.Component {
                   className="post-content"
                   dangerouslySetInnerHTML={{ __html: postNode.html }}
                 />
+
+                <div>
+                  {postNode.html}
+                </div>
 
                 <PostFooter>
                   <AuthorImage author={authorData} />
