@@ -118,16 +118,10 @@ class PostTemplate extends React.Component {
                     <PostTags prefix=" on " tags={tags} />
                   </section>
                 </PostHeader>
-
                 <section
                   className="post-content"
                   dangerouslySetInnerHTML={{ __html: postNode.html }}
                 />
-
-                <div>
-                  {postNode.html}
-                </div>
-
                 <PostFooter>
                   <AuthorImage author={authorData} />
                   <AuthorInfo prefix="/author" author={authorData} />
