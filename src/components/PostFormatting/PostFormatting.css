@@ -41,7 +41,7 @@ div.page-template .post-title {
 
 .post-template .post-title,
 .page-template .post-title {
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .post-excerpt p {
@@ -57,20 +57,28 @@ div.page-template .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #9eabb3;
+    color: #9eabb3;  
 }
 
 .post-meta a {
     color: #9eabb3;
     text-decoration: none;
+
+    border-radius: 16px;
+    display: inline-flex;
+    padding-left: 12px;
+    padding-right: 12px;
+    background: #fbe9e7;
+
 }
 
 .post-meta a:hover {
-    color: #9eabb3;
-    text-decoration: underline;
+    color: #ffffff;
+    text-decoration: none;
+    background: #9eabb3;
 }
 
 .post-template .post-meta,

@@ -8,14 +8,17 @@ class PostTags extends Component {
     const { prefix, tags } = this.props;
     if (tags) {
       return (
-        <span>
+        <span
+          className="post-tag"
+        >
           {prefix}
+          <b>TAGS </b>
           {tags.map((tag, index, arr) => (
             <span key={tag}>
               <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
                 {tag}
               </Link>
-              {index !== arr.length - 1 ? ", " : ""}
+              {index !== arr.length - 1 ? " " : ""}
             </span>
           ))}
         </span>

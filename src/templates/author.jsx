@@ -52,9 +52,9 @@ class AuthorTemplate extends React.Component {
   render() {
     const { author, cover } = this.props.pageContext;
     const postEdges =
-      this.props.data.allMarkdownRemark &&
-      this.props.data.allMarkdownRemark.edges
-        ? this.props.data.allMarkdownRemark.edges
+      this.props.data.allMdx &&
+      this.props.data.allMdx.edges
+        ? this.props.data.allMdx.edges
         : [];
     const authorsEdges =
       this.props.data.allAuthorsJson && this.props.data.allAuthorsJson.edges
@@ -113,7 +113,7 @@ class AuthorTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query AuthorPage($author: String) {
-    allMarkdownRemark(
+    allMdx(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { author: { eq: $author } } }

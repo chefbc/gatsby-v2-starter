@@ -1,2 +1,25 @@
-/** empty css file for component consistency **/
+.post-tags {
+    display: inline-block;
+    margin-left: 8px;
+    padding-left: 12px;
+    border-left: #d5dbde 1px solid;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: #fbe9e7;
+}
 
+/* height: 32px;
+display: inline-flex;
+border-radius: 16px;
+margin-right: 12px;
+background: #fbe9e7;
+align-items: center; */
+/* ==========================================================================
+       Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+    .post-tags {
+        display: none;
+    }
+}

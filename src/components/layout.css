@@ -3,7 +3,7 @@
    ========================================================================== */
 
 html {
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -171,7 +171,7 @@ th { padding: 0; }
 /* Apply these base styles to all icons */
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+    font-family: "casper-icons", "Roboto Condensed", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -239,7 +239,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Merriweather", serif;
+    font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -270,7 +270,7 @@ h6 {
     color: #2e2e2e;
     line-height: 1.15em;
     margin: 0 0 0.4em;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     text-rendering: geometricPrecision;
 }
 
@@ -521,7 +521,7 @@ input:not([type="radio"]):not([type="checkbox"]) {
     padding: 6px 9px;
     margin: 0 0 5px;
     outline: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.6rem;
     font-weight: 100;
     line-height: 1.4em;
@@ -575,7 +575,7 @@ button {
     outline: none;
     text-decoration: none;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 11px; /* Hacks targeting Firefox. */
     line-height: 13px; /* Hacks targeting Firefox. */
     font-weight: 300;

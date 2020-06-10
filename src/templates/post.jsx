@@ -21,10 +21,12 @@ import PostShare from "../components/PostShare/PostShare";
 import GhostSubscribe from "../components/GhostSubscribe/GhostSubscribe";
 import ReadNext from "../components/ReadNext/ReadNext";
 import PostTags from "../components/PostTags/PostTags";
+import PostReadTime from "../components/PostReadTime/PostReadTime"
 import Footer from "../components/Footer/Footer";
 import AuthorModel from "../models/author-model";
 import Disqus from "../components/Disqus/Disqus";
 import Layout from "../components/layout";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 function parsePost(post, slug) {
   const result = post;
@@ -75,7 +77,7 @@ class PostTemplate extends React.Component {
     const { location, data } = this.props;
     const { slug, next, prev } = this.props.pageContext;
 
-    const postNode = this.props.data.markdownRemark;
+    const postNode = this.props.data.mdx;
     const post = parsePost(postNode.frontmatter, slug);
 
     const { cover, title, date, author, tags } = post;
@@ -115,13 +117,11 @@ class PostTemplate extends React.Component {
                   <h1 className="post-title">{title}</h1>
                   <section className="post-meta">
                     <PostDate date={date} />
-                    <PostTags prefix=" on " tags={tags} />
+                    <PostReadTime prefix=" - " time={postNode.timeToRead} postfix=" min read " />
+                    <PostTags prefix=" - " tags={tags} />
                   </section>
                 </PostHeader>
-                <section
-                  className="post-content"
-                  dangerouslySetInnerHTML={{ __html: postNode.html }}
-                />
+                <MDXRenderer className="post-content">{postNode.body}</MDXRenderer>
                 <PostFooter>
                   <AuthorImage author={authorData} />
                   <AuthorInfo prefix="/author" author={authorData} />
@@ -152,8 +152,8 @@ class PostTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!, $next: String, $prev: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       timeToRead
       excerpt
       frontmatter {
@@ -169,7 +169,7 @@ export const pageQuery = graphql`
       }
     }
     # prev post data
-    prev: markdownRemark(fields: { slug: { eq: $prev } }) {
+    prev: mdx(fields: { slug: { eq: $prev } }) {
       excerpt(pruneLength: 112)
       frontmatter {
         title
@@ -181,7 +181,7 @@ export const pageQuery = graphql`
       }
     }
     # next post data
-    next: markdownRemark(fields: { slug: { eq: $next } }) {
+    next: mdx(fields: { slug: { eq: $next } }) {
       excerpt(pruneLength: 112)
       frontmatter {
         title

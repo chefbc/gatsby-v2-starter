@@ -10,7 +10,7 @@ const {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === "Mdx") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
@@ -58,7 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allMarkdownRemark(
+            allMdx(
               limit: 1000
               sort: { fields: [frontmatter___date], order: DESC }
             ) {
@@ -93,7 +93,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Creates Index page
         createPaginationPages({
           createPage,
-          edges: result.data.allMarkdownRemark.edges,
+          edges: result.data.allMdx.edges,
           component: indexPage,
           limit: siteConfig.sitePaginationLimit
         });
@@ -101,7 +101,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Creates Posts
         createLinkedPages({
           createPage,
-          edges: result.data.allMarkdownRemark.edges,
+          edges: result.data.allMdx.edges,
           component: postPage,
           edgeParser: edge => ({
             path: edge.node.fields.slug,
@@ -118,7 +118,7 @@ exports.createPages = ({ graphql, actions }) => {
         const authorSet = new Set();
         authorSet.add(siteConfig.blogAuthorId);
 
-        result.data.allMarkdownRemark.edges.forEach(edge => {
+        result.data.allMdx.edges.forEach(edge => {
           if (edge.node.frontmatter.tags) {
             edge.node.frontmatter.tags.forEach(tag => {
               tagSet.add(tag);
