@@ -15,6 +15,7 @@ module.exports = {
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "ChefBC", // The author name used in the RSS file
+  siteRssTitle: "`chefbc.com RSS Feed`,", // The rss feed name
   // siteFBAppID: "1825356251115265", // optional, sets the FB Application ID for using app insights
   sitePaginationLimit: 10, // The max number of posts per page.
   googleAnalyticsID: "UA-30955144-5", // GA tracking ID.
