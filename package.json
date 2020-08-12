@@ -9,7 +9,7 @@
     "babel-eslint": "^10.0.1",
     "classnames": "^2.2.6",
     "copy-text-to-clipboard": "^2.1.1",
-    "gatsby": "^2.0.33",
+    "gatsby": "^2.23.3",
     "gatsby-pagination": "^1.2.0",
     "gatsby-plugin-catch-links": "^2.0.4",
     "gatsby-plugin-feed-mdx": "^1.0.1",
