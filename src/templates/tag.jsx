@@ -16,7 +16,6 @@ import PhotoDescription from "../components/PhotoDescription/PhotoDescription";
 import Footer from "../components/Footer/Footer";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import Layout from "../components/layout";
-import Unsplash from "../components/Unsplash/Unsplash";
 
 class TagTemplate extends React.Component {
   state = {
@@ -83,11 +82,6 @@ class TagTemplate extends React.Component {
                       text={tag.description || `${total} posts`}
                     />
                   </div>
-                  {/* <Unsplash
-                    author={config.tagDetails.author}
-                    sourceUrl={config.tagDetails.sourceUrl}
-                    sourceText={config.tagDetails.sourceText}
-                  /> */}
                 </div>
               </MainHeader>
               <PhotoDescription
