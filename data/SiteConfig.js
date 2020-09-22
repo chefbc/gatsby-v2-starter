@@ -9,9 +9,12 @@ module.exports = {
   siteUrl: "https://chefbc.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "random thoughts and ideas", // Website description used for RSS feeds/meta description tag.
+    "random thoughts, ideas and snippets", // Website description used for RSS feeds/meta description tag.
   siteCover:
-    "/images/blog-cover4.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
+    "/images/blog-cover6.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
+  siteAuthor: "Caspar Camille Rubin",
+  siteSourceUrl: "https://unsplash.com/photos/fPkvU7RDmCo",
+  siteSourceText: "Unsplash",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "ChefBC", // The author name used in the RSS file
@@ -23,7 +26,8 @@ module.exports = {
   siteSocialUrls: [
     "https://github.com/chefbc/",
     "https://twitter.com/chefbc001",
-    "https://www.linkedin.com/in/caseycarlsen"
+    "https://www.linkedin.com/in/caseycarlsen",
+    "https://www.facebook.com/chefbc"
   ],
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
@@ -50,6 +54,17 @@ module.exports = {
     // year: "2018" // optional, set specific copyright year or range of years, defaults to current year
     // url: "https://www.gatsbyjs.org/" // optional, set link address of copyright, defaults to site root
   },
+  tagDetails: {
+    cover: "https://source.unsplash.com/d9ILr-dbEdg/1280x500",
+    author: "Agence Olloweb",
+    sourceUrl: "https://unsplash.com/photos/d9ILr-dbEdg",
+    sourceText: "Unsplash",
+  },
+  // tagCover: "https://source.unsplash.com/d9ILr-dbEdg/1280x500",
+  // tagAuthor: "Agence Olloweb",
+  // tagLink: "Agence Olloweb",
+  // tagSource: "Unsplash",
+
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   promoteGatsby: true // Enables the GatsbyJS promotion information in footer.

@@ -12,9 +12,11 @@ import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
+import PhotoDescription from "../components/PhotoDescription/PhotoDescription";
 import Footer from "../components/Footer/Footer";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import Layout from "../components/layout";
+import Unsplash from "../components/Unsplash/Unsplash";
 
 class TagTemplate extends React.Component {
   state = {
@@ -66,7 +68,7 @@ class TagTemplate extends React.Component {
             {/* All the main content gets inserted here */}
             <div className="tag-template">
               {/* The big featured header */}
-              <MainHeader className="tag-head" cover={tag.featureImage}>
+              <MainHeader className="tag-head" cover={config.tagDetails.cover}>
                 <MainNav>
                   <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
                   <MenuButton
@@ -76,14 +78,23 @@ class TagTemplate extends React.Component {
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
-                    <PageTitle text={tag} />
+                    <PageTitle text={`< ${tag} >`} />
                     <PageDescription
-                      text={tag.description || `A ${total}-post collection`}
+                      text={tag.description || `${total} posts`}
                     />
                   </div>
+                  {/* <Unsplash
+                    author={config.tagDetails.author}
+                    sourceUrl={config.tagDetails.sourceUrl}
+                    sourceText={config.tagDetails.sourceText}
+                  /> */}
                 </div>
               </MainHeader>
-
+              <PhotoDescription
+                author={config.tagDetails.author}
+                sourceUrl={config.tagDetails.sourceUrl}
+                sourceText={config.tagDetails.sourceText}
+              />
               <PaginatedContent
                 page={page}
                 pages={pages}

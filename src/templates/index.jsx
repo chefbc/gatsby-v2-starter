@@ -15,6 +15,7 @@ import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
+import PhotoDescription from "../components/PhotoDescription/PhotoDescription";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 import Layout from "../components/layout";
@@ -81,8 +82,11 @@ class IndexTemplate extends React.Component {
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
-                    <PageTitle text={config.siteTitle} />
-                    <PageDescription text={config.siteDescription} />
+                    <PageTitle text={`< ${config.siteTitle} >`} />
+                    <br />
+                    <br />
+                    <br />
+                    <PageDescription text={`{ ${config.siteDescription} }`} />
                     <SocialMediaIcons
                       urls={config.siteSocialUrls}
                       color="currentColor"
@@ -100,7 +104,11 @@ class IndexTemplate extends React.Component {
                   <span className="hidden">Scroll Down</span>
                 </Link>
               </MainHeader>
-
+              <PhotoDescription
+                author={config.siteAuthor}
+                sourceUrl={config.siteSourceUrl}
+                sourceText={config.siteSourceText}
+              />
               <PaginatedContent
                 page={page}
                 pages={pages}

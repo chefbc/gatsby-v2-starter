@@ -1,6 +1,9 @@
 ---
 title: "Setup a Python Development Environment"
 cover: "https://source.unsplash.com/cxMJYcuCLEA/1280x500"
+coverAuthor: "David Clode"
+coverSource: "https://unsplash.com/photos/cxMJYcuCLEA"
+coverSourceText: "Unsplash"
 author: "chefbc"
 date: "2020-04-27"
 category: "tech"
@@ -9,8 +12,14 @@ tags:
     - development
     - programming
     - coding
+    - hello
 ---
 
+
+
+    const { author } = this.props;
+    const { sourceUrl } = this.props;
+    const { sourceText } = this.props;
 This is intended as a quick reference and explanation of how I setup environments to develop via Python on my Mac.
 
 ### Requirements

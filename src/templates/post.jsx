@@ -27,6 +27,7 @@ import AuthorModel from "../models/author-model";
 import Disqus from "../components/Disqus/Disqus";
 import Layout from "../components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import PhotoDescription from "../components/PhotoDescription/PhotoDescription";
 
 function parsePost(post, slug) {
   const result = post;
@@ -80,7 +81,8 @@ class PostTemplate extends React.Component {
     const postNode = this.props.data.mdx;
     const post = parsePost(postNode.frontmatter, slug);
 
-    const { cover, title, date, author, tags } = post;
+    const { cover, coverAuthor, coverSource, coverSourceText, title, date, author, tags } = post;
+
     const className = post.post_class ? post.post_class : "post";
     const authorData = AuthorModel.getAuthor(
       this.props.data.authors.edges,
@@ -111,6 +113,11 @@ class PostTemplate extends React.Component {
                 />
               </MainNav>
             </MainHeader>
+            <PhotoDescription
+              author={coverAuthor}
+              sourceUrl={coverSource}
+              sourceText={coverSourceText}
+            />
             <MainContent>
               <PostFormatting className={className}>
                 <PostHeader>
@@ -159,6 +166,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         cover
+        coverAuthor
+        coverSource
+        coverSourceText
         date
         category
         tags

@@ -1,6 +1,9 @@
 ---
 title: "Format and Mount Disk on GCP Instance"
 cover: "https://source.unsplash.com/wYD_wfifJVs/1280x500"
+coverAuthor: "Vincent Botta"
+coverSource: "https://unsplash.com/photos/wYD_wfifJVs"
+coverSourceText: "Unsplash"
 author: "chefbc"
 date: "2020-04-29"
 category: "tech"

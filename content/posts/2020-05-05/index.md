@@ -1,6 +1,9 @@
 ---
 title: "SSH snippets"
 cover: "https://source.unsplash.com/CD4WHrWio6Q/1280x500"
+coverAuthor: "Daniel Jerez"
+coverSource: "https://unsplash.com/photos/CD4WHrWio6Q"
+coverSourceText: "Unsplash"
 author: "chefbc"
 date: "2020-05-05"
 category: "tech"

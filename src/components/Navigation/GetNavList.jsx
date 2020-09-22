@@ -31,7 +31,8 @@ function GetNavList(config) {
     primaryText: "About",
     // LeftIcon: <FontIcon>person</FontIcon>,
     component: Link,
-    to: "/about/"
+    //to: "/about/"
+    to: "author/chefbc"
   });
   return NavList;
 }
