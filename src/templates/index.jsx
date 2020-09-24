@@ -83,10 +83,9 @@ class IndexTemplate extends React.Component {
                 <div className="vertical">
                   <div className="main-header-content inner">
                     <PageTitle text={`< ${config.siteTitle} >`} />
-                    <br />
-                    <br />
-                    <br />
-                    <PageDescription text={`{ ${config.siteDescription} }`} />
+                    <BlogLogo logo={config.siteLogo} title={config.siteTitle} cssClass="blog-logo-cover" />
+                    {/* <img src={config.siteLogo} alt={config.siteTitle}></img> */}
+                    <PageDescription text={config.siteDescription} />
                     <SocialMediaIcons
                       urls={config.siteSocialUrls}
                       color="currentColor"

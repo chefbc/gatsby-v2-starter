@@ -32,7 +32,7 @@ function GetNavList(config) {
     // LeftIcon: <FontIcon>person</FontIcon>,
     component: Link,
     //to: "/about/"
-    to: "author/chefbc"
+    to: "/author/chefbc"
   });
   return NavList;
 }

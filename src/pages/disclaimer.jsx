@@ -24,7 +24,7 @@ import Layout from "../components/layout";
 import PhotoDescription from "../components/PhotoDescription/PhotoDescription";
 
 
-class FourOhhFour extends React.Component {
+class Disclaimer extends React.Component {
   state = {
     menuOpen: false
   };
@@ -66,7 +66,7 @@ class FourOhhFour extends React.Component {
 
     const get404 = {
       "name": "chefbc",
-      "image": "/logos/question.png",
+      "image": "/logos/logo.png",
       "url": "http://chefbc.com/",
     }
 
@@ -75,8 +75,8 @@ class FourOhhFour extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Drawer className="author-template" isOpen={this.state.menuOpen}>
-          <Helmet title={`Page Not Found | ${config.siteTitle}`} />
+        <Drawer className="disclaimer-template" isOpen={this.state.menuOpen}>
+          <Helmet title={`Disclaimer | ${config.siteTitle}`} />
 
           {/* The blog navigation links */}
           <Navigation config={config} onClose={this.handleOnClose} />
@@ -93,11 +93,8 @@ class FourOhhFour extends React.Component {
             </MainHeader>
             <AuthorProfile className="inner">
               <AuthorImage author={get404} />
-              <AuthorName name="Four Oh Four - Page Not Found" />
-              <AuthorBio bio="Checkout some pages that do exist!" />
-              <AuthorMeta>
-              </AuthorMeta>
-              <AuthorStats postEdges={postEdges} />
+              <AuthorName name="Disclaimer" />
+              <AuthorBio bio="text" />
             </AuthorProfile>
 
             {/* PostListing component renders all the posts */}
@@ -117,7 +114,7 @@ class FourOhhFour extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query FourOhhFour($author: String) {
+  query Disclaimer($author: String) {
     allMdx(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -157,4 +154,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default FourOhhFour;
+export default Disclaimer;

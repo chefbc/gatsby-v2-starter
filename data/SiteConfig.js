@@ -9,7 +9,7 @@ module.exports = {
   siteUrl: "https://chefbc.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "random thoughts, ideas and snippets", // Website description used for RSS feeds/meta description tag.
+    "", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "/images/blog-cover6.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteAuthor: "Caspar Camille Rubin",
@@ -32,11 +32,16 @@ module.exports = {
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
   userLinks: [
-    // {
-    //   label: "GitHub",
-    //   url: "https://github.com/chefbc",
-    //   iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
-    // },
+    {
+      label: "Search",
+      url: "/",
+      iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
+    },
+    {
+      label: "Disclaimer",
+      url: "/",
+      iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
+    },
     // {
     //   label: "Twitter",
     //   url: "https://twitter.com/chefbc001",
