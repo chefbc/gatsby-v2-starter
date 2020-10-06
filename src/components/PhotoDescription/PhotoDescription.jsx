@@ -14,6 +14,7 @@ class PhotoDescription extends React.Component {
           <a href={sourceUrl || "/"}> {sourceText}</a></h2>
       );
     }
+    /* eslint-disable */
     return <h2 className="photo-description"></h2>;
   }
 }
