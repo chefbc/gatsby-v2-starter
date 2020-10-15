@@ -16,10 +16,6 @@ tags:
 ---
 
 
-
-    const { author } = this.props;
-    const { sourceUrl } = this.props;
-    const { sourceText } = this.props;
 This is intended as a quick reference and explanation of how I setup environments to develop via Python on my Mac.
 
 ### Requirements

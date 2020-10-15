@@ -18,6 +18,7 @@ module.exports = {
     }
   },
   plugins: [
+    //"gatsby-plugin-theme-ui",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
@@ -84,15 +85,15 @@ module.exports = {
         display: "minimal-ui",
         icons: [
           {
-            src: "/logos/logo-192x192.png",
+            src: "/logos/logo.png",
             sizes: "192x192",
             type: "image/png"
-          },
-          {
-            src: "/logos/logo-512x512.png",
-            sizes: "512x512",
-            type: "image/png"
-          }
+          }//,
+          // {
+          //   src: "/logos/logo-512x512.png",
+          //   sizes: "512x512",
+          //   type: "image/png"
+          // }
         ]
       }
     },
