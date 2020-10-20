@@ -63,4 +63,5 @@ Storytelling always follows a certain structure: exposition, rising action, clim
 
 
 ##### Links
-[Story Telling](https://www.gripagency.com/post/storytelling-template-for-writing-effective-technology-content)
+* [story-telling](https://www.gripagency.com/post/storytelling-template-for-writing-effective-technology-content)
+* [how-to-write-a-narrative](https://aws.amazon.com/blogs/startups/startup-advice-how-to-write-a-narrative/)

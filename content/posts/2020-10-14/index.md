@@ -56,10 +56,9 @@ select @@tmp_table_size / 1024 / 1024  AS tmp_table_size_mb;
 
 
 ##### Links
-[mysqlcalculator](http://www.mysqlcalculator.com)
-[mysql-memory-calculator](https://dannyda.com/mysql-memory-calculator/)
-
-
+* [mysqlcalculator](http://www.mysqlcalculator.com)
+* [mysql-memory-calculator](https://dannyda.com/mysql-memory-calculator/)
+* [calculate-number-of-connections](https://journeyontux.wordpress.com/2011/12/22/calculate-number-of-connections-for-mysql-server/)
 
 
 
