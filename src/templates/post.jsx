@@ -28,6 +28,31 @@ import Disqus from "../components/Disqus/Disqus";
 import Layout from "../components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import PhotoDescription from "../components/PhotoDescription/PhotoDescription";
+import { MDXProvider } from '@mdx-js/react'
+//import mdxComponents from '../components/mdxComponents';
+import mdxComponents from '../components/code';
+
+import { Code } from '../components/Code/Code2'
+import { preToCodeBlock } from 'mdx-utils'
+//import { preToCodeBlock } from '../components/Code/index'
+
+const components = {
+  pre: preProps => {
+    const props = preToCodeBlock(preProps)
+
+    console.info(props)
+
+    //const props = ({ codeString, children, language, ...props })
+
+    // if there's a codeString and some props, we passed the test
+    if (props) {
+      return <Code {...props} />
+    } else {
+      // it's possible to have a pre without a code in it
+      return <pre {...preProps} />
+    }
+  },
+}
 
 function parsePost(post, slug) {
   const result = post;
@@ -129,6 +154,7 @@ class PostTemplate extends React.Component {
                   </section>
                 </PostHeader>
                 <MDXRenderer className="post-content">{postNode.body}</MDXRenderer>
+                {/* <MDXProvider className="post-content" components={mdxComponents}>{postNode.body}</MDXProvider> */}
                 <PostFooter>
                   <AuthorImage author={authorData} />
                   <AuthorInfo prefix="/author" author={authorData} />

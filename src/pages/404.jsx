@@ -15,14 +15,9 @@ import AuthorProfile from "../components/AuthorProfile/AuthorProfile";
 import AuthorName from "../components/AuthorName/AuthorName";
 import AuthorBio from "../components/AuthorBio/AuthorBio";
 import AuthorMeta from "../components/AuthorMeta/AuthorMeta";
-import AuthorLocation from "../components/AuthorLocation/AuthorLocation";
-import AuthorWebsite from "../components/AuthorWebsite/AuthorWebsite";
 import AuthorStats from "../components/AuthorStats/AuthorStats";
 import Footer from "../components/Footer/Footer";
-import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 import Layout from "../components/layout";
-import PhotoDescription from "../components/PhotoDescription/PhotoDescription";
-
 
 class FourOhhFour extends React.Component {
   state = {
@@ -52,7 +47,7 @@ class FourOhhFour extends React.Component {
   };
 
   render() {
-    const { author, cover } = this.props.pageContext;
+    const { cover } = this.props.pageContext;
     const postEdges =
       this.props.data.allMdx &&
       this.props.data.allMdx.edges
