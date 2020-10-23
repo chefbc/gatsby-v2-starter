@@ -128,7 +128,7 @@ class PostTemplate extends React.Component {
                     <PostTags prefix=" - " tags={tags} />
                   </section>
                 </PostHeader>
-                <MDXRenderer className="post-content">{postNode.body}</MDXRenderer>
+                <MDXRenderer>{postNode.body}</MDXRenderer>
                 <PostFooter>
                   <AuthorImage author={authorData} />
                   <AuthorInfo prefix="/author" author={authorData} />
@@ -160,9 +160,6 @@ class PostTemplate extends React.Component {
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!, $next: String, $prev: String) {
     mdx(fields: { slug: { eq: $slug } }) {
-      body
-      timeToRead
-      excerpt
       frontmatter {
         title
         cover
@@ -177,10 +174,11 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      body
+      timeToRead
     }
     # prev post data
     prev: mdx(fields: { slug: { eq: $prev } }) {
-      excerpt(pruneLength: 112)
       frontmatter {
         title
         cover
@@ -192,7 +190,6 @@ export const pageQuery = graphql`
     }
     # next post data
     next: mdx(fields: { slug: { eq: $next } }) {
-      excerpt(pruneLength: 112)
       frontmatter {
         title
         cover

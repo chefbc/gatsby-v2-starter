@@ -15,18 +15,41 @@ tags:
 ---
 
 
-```
-hello
-```
-
 ```bash
-hello
+#!/bin/bash
+echo "Hello World"
 ```
 
-```py
-print ('*'*100)
+```python
+print("Hello, World!")
 ```
+
 
 ```js
-const = hello
+alert('Hello, World!');
+```
+
+
+```java
+class HelloWorld
+{
+    // Your program begins with a call to main().
+    // Prints "Hello, World" to the terminal window.
+    public static void main(String args[])
+    {
+        System.out.println("Hello, World");
+    }
+}
+```
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <p>This is an example of a simple HTML page with one paragraph.</p>
+    </body>
+</html>
 ```

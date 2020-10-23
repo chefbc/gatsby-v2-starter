@@ -76,8 +76,6 @@ exports.createPages = ({ graphql, actions }) => {
                   fields {
                     slug
                   }
-                  excerpt
-                  timeToRead
                 }
               }
             }

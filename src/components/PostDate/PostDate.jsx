@@ -5,12 +5,16 @@ import "./PostDate.css";
 class PostDate extends React.Component {
   render() {
     const { date } = this.props;
+
+    var postdate = new Date(date);
+    postdate.setDate(postdate.getDate() + 1);
+
     return (
       <time
         className="post-date"
-        dateTime={moment(new Date(date)).format("YYYY-MM-DD")}
+        dateTime={moment(postdate).format("YYYY-MM-DD")}
       >
-        {moment(new Date(date)).format("MM.DD.YYYY")}
+        {moment(postdate).format("MM.DD.YYYY")}
       </time>
     );
   }
