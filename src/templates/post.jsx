@@ -176,6 +176,7 @@ export const pageQuery = graphql`
       }
       body
       timeToRead
+      excerpt
     }
     # prev post data
     prev: mdx(fields: { slug: { eq: $prev } }) {
