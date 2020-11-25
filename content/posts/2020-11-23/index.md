@@ -77,7 +77,7 @@ Configure `HAProxy`
 export SERVER_IP=<SERVER_IP_HERE>
 export CRC_IP=<CRC_IP_HERE>
 ```
-Backup orginal `haproxy.cfg
+Backup orginal `haproxy.cfg`
 ```bash
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orig
 ```
