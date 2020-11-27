@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql, Link, navigate } from "gatsby"
 import queryString from "query-string"
 
+
 class x404Page extends React.Component {
   static propTypes = {
     data: PropTypes.object,

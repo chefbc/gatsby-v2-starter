@@ -129,9 +129,10 @@ sudo sed -i "s/SERVER_IP/$SERVER_IP/g" haproxy.cfg
 sudo sed -i "s/CRC_IP/$CRC_IP/g" haproxy.cfg
 ```
 
-Start `HAProxy`
+Start and Enable `HAProxy`
 ```bash
 systemctl start haproxy
+systemctl enable haproxy.service 
 ```
 
 

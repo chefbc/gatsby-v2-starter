@@ -183,3 +183,9 @@ The project uses [Conventional Commits](https://conventionalcommits.org/) which 
 ## License
 
 MIT
+
+
+
+
+https://medium.com/humanseelabs/gatsby-v2-with-a-multi-language-search-plugin-ffc5e04f73bc
+https://css-tricks.com/how-to-add-lunr-search-to-your-gatsby-website/
