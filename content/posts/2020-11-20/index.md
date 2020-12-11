@@ -20,7 +20,7 @@ tags:
 | oc whoami                    |   show the current user context          |
 
 ```bash
-example here
+oc login -u kubeadmin -p xxx https://api.crc.testing:6443
 ```
 
 | Project management           |                                                       |
@@ -31,7 +31,8 @@ example here
 | oc new-project               |   create a new project  and change to that context    |
 
 ```bash
-examples here
+oc create namespace peewee
+oc project peewee
 ```
 
 | Resource management          |                                                                |
@@ -48,7 +49,7 @@ examples here
 | oc describe                  |   retrieve a resource with details                             |
 
 ```bash
-examples here
+oc new-app https://github.com/chefbc/peewee.git
 ```
 
 | Operational commands         |                                                   |
@@ -61,8 +62,14 @@ examples here
 | oc idle                      |   scale resources to zero replicas                |
 
 ```bash
-examples here
+oc logs -f peewee-1-build
+oc logs -f peewee-
+
+oc get services --namespace=peewee
+oc expose svc/peewee
+oc get routes
 ```
+
 
 | Operational commands         |                                                              |
 | ---------------------------- |------------------------------------------------------------- |
@@ -78,6 +85,6 @@ examples here
 | oc scale                     |   change the number of pod replicas for a deployment         |
 
 ```bash
-examples here
+oc start-build peewee
 ```
 
