@@ -15,8 +15,7 @@ tags:
 
 Identity-Aware Proxy is a managed service that can control the access to your VM without an bastion host. 
 
-![alt text](iap.png "iap diagram")
-
+![alt text](https://cloud.google.com/iap/images/iap-tcp-forwarding-diagram.png "iap diagram")
 
 <!-- gcloud compute ssh virtual-machine-from-terraform \
 --tunnel-through-iap 
