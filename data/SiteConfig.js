@@ -9,7 +9,7 @@ module.exports = {
   siteUrl: "https://chefbc.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "", // Website description used for RSS feeds/meta description tag.
+    "It's me ChefBC! - Blog, Notes, Snippets", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "/images/blog-cover6.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteAuthor: "Caspar Camille Rubin",
