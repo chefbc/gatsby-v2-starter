@@ -46,7 +46,7 @@ gcloud compute instances describe ${INSTANCE_NAME} --zone "${ZONE_NAME}" --forma
 
 ###### ext4
 ```bash
-DEVICE_ID=`ll /dev/disk/by-id/google-${DEVICE_NAME}| sed 's|.*/||'`
+DEVICE_ID=`ls -lart /dev/disk/by-id/google-${DEVICE_NAME}| sed 's|.*/||'`
 sudo mkfs.ext4 -m 0 -F -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/${DEVICE_ID}
 MNT_DIR="/mysql/bkupdisk"
 mkdir -p ${MNT_DIR}
@@ -55,7 +55,7 @@ sudo mount -o nofail,noatime,nodev,defaults /dev/${DEVICE_ID} ${MNT_DIR}
 
 ###### xfs
 ```bash
-DEVICE_ID=`ll /dev/disk/by-id/google-${DEVICE_NAME}| sed 's|.*/||'`
+DEVICE_ID=`ls -lart  /dev/disk/by-id/google-${DEVICE_NAME}| sed 's|.*/||'`
 mkfs.xfs /dev/${DEVICE_ID}
 MNT_DIR="/mysql/bkupdisk"
 mkdir -p ${MNT_DIR}

@@ -25,15 +25,24 @@ Install `crc`
 wget https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/crc-linux-amd64.tar.xz
 
 tar xvf crc-linux-amd64.tar.xz
-sudo mv crc-linux-1.19.0-amd64/crc /usr/local/bin
+sudo mv crc-linux-1.25.0-amd64/crc /usr/local/bin
 ```
 
 Install `oc` & `kubectl`
 ```bash
-wget https://github.com/openshift/okd/releases/download/4.5.0-0.okd-2020-10-15-235428/openshift-client-linux-4.5.0-0.okd-2020-10-15-235428.tar.gz
+wget https://github.com/openshift/okd/releases/download/4.7.0-0.okd-2021-04-11-124433/openshift-client-linux-4.7.0-0.okd-2021-04-11-124433.tar.gz
 
-tar xvf crc-linux-amd64.tar.xz
-sudo mv crc-linux-1.19.0-amd64/crc /usr/local/bin
+tar xvf openshift-client-linux-4.7.0-0.okd-2021-04-11-124433.tar.gz 
+sudo mv oc /usr/local/bin/
+sudo mv kubectl /usr/local/bin/
+```
+
+
+Create `crc` user
+```bash
+useradd crc
+passwd crc
+usermod -aG wheel crc
 ```
 
 Setup `crc`
@@ -84,49 +93,58 @@ sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orig
 
 Replace contents of the `haproxy.cfg` with:
 ```bash
-vi /etc/haproxy/haproxy.cfg
+export HOST_IP=$(hostname --ip-address)
+export CRC_IP=$(crc ip)
 ```
-```bash
-global
-debug
 
+```bash
+tee /etc/haproxy/haproxy.cfg &>/dev/null <<EOF
 defaults
-log global
-mode http
-timeout connect 0
-timeout client 0
-timeout server 0
+    mode http
+    log global
+    option httplog
+    option  http-server-close
+    option  dontlognull
+    option  redispatch
+    option  contstats
+    retries 3
+    backlog 10000
+    timeout client          25s
+    timeout connect          5s
+    timeout server          25s
+    timeout tunnel        3600s
+    timeout http-keep-alive  1s
+    timeout http-request    15s
+    timeout queue           30s
+    timeout tarpit          60s
+    default-server inter 3s rise 2 fall 3
+    option forwardfor
 
 frontend apps
-bind SERVER_IP:80
-bind SERVER_IP:443
-option tcplog
-mode tcp
-default_backend apps
+    bind $HOST_IP:80
+    bind $HOST_IP:443
+    option tcplog
+    mode tcp
+    default_backend apps
 
 backend apps
-mode tcp
-balance roundrobin
-option ssl-hello-chk
-server webserver1 CRC_IP check
+    mode tcp
+    balance roundrobin
+    option tcp-check
+    server webserver1 $CRC_IP check port 80
 
 frontend api
-bind SERVER_IP:6443
-option tcplog
-mode tcp
-default_backend api
+    bind $HOST_IP:6443
+    option tcplog
+    mode tcp
+    default_backend api
 
 backend api
-mode tcp
-balance roundrobin
-option ssl-hello-chk
-server webserver1 CRC_IP:6443 check
-```
-
-Replacements `placeholders` with `values`
-```bash
-sudo sed -i "s/SERVER_IP/$SERVER_IP/g" haproxy.cfg
-sudo sed -i "s/CRC_IP/$CRC_IP/g" haproxy.cfg
+    mode tcp
+    balance roundrobin
+    option tcp-check
+    server webserver1 $CRC_IP:6443 check port 6443
+EOF
 ```
 
 Start and Enable `HAProxy`
